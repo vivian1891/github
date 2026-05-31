@@ -1,4 +1,4 @@
-const DOWNLOAD_PAGE = "/kexue.html";
+﻿const DOWNLOAD_PAGE = "/kexue.html";
 
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".btn-download").forEach(function (button) {
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (contactForm) {
     contactForm.addEventListener("submit", function (event) {
       event.preventDefault();
-      alert("信息已记录，请通过邮箱 support@example.com 获取进一步支持。");
+      alert("信息已记录，请通过邮箱 301jk_educn@163.com 获取进一步支持。");
     });
   }
 });
