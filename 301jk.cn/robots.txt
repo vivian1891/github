@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /kexue.html
+
+Sitemap: https://301jk.cn/sitemap.xml
