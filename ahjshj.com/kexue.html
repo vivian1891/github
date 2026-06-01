@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>正在前往下载页面</title>
+  <meta name="keywords" content="加速器下载跳转,app下载入口">
+  <meta name="description" content="正在前往加速器下载页面，请稍候；如未自动跳转，可点击手动下载按钮继续。">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="redirect-body">
+<main class="redirect-page">
+  <section class="redirect-shell" aria-label="下载跳转提示">
+    <div class="redirect-card">
+      <div class="redirect-brand">
+        <img src="/assets/images/logo.png" alt="加速器官方网站Logo" title="加速器官方网站Logo">
+      </div>
+      <div class="redirect-status">
+        <span class="pulse-dot"></span>
+        安全连接准备中
+      </div>
+      <h1>正在前往下载页面，请稍候</h1>
+      <p>系统将在 <strong id="countdown">3</strong> 秒后自动打开下载页面。若浏览器拦截跳转，可点击下方按钮手动继续。</p>
+      <div class="redirect-progress" aria-hidden="true"><span></span></div>
+      <div class="redirect-actions">
+        <a id="manualDownload" class="btn btn-primary" href="#" rel="nofollow sponsored noopener noreferrer">手动前往下载</a>
+        <a class="btn btn-ghost" href="/">返回首页</a>
+      </div>
+      <div class="redirect-tips">
+        <div><b>官方入口</b><span>请确认从本站进入下载流程</span></div>
+        <div><b>多端支持</b><span>安卓与iOS按页面提示安装</span></div>
+        <div><b>线路优化</b><span>安装后建议先进行测速</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+  const REAL_DOWNLOAD_URL = "https://b55.313486.xyz:35888/";
+  const manualDownload = document.getElementById("manualDownload");
+  const countdown = document.getElementById("countdown");
+  let seconds = 3;
+
+  manualDownload.href = REAL_DOWNLOAD_URL;
+
+  const timer = setInterval(function () {
+    seconds -= 1;
+    countdown.textContent = seconds;
+    if (seconds <= 0) {
+      clearInterval(timer);
+      window.location.href = REAL_DOWNLOAD_URL;
+    }
+  }, 1000);
+</script>
+</body>
+</html>
