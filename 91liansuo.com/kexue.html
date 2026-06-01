@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="下载中转页面，页面会自动前往下载地址。">
+  <title>正在前往下载页面</title>
+  <link rel="canonical" href="https://91liansuo.com/kexue.html">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="transfer-page">
+  <main class="transfer-shell">
+    <section class="transfer-card" aria-live="polite">
+      <div class="transfer-mark">
+        <span></span>
+      </div>
+      <p class="transfer-kicker">下载跳转</p>
+      <h1>正在前往下载页面</h1>
+      <p class="transfer-text">请稍候，页面将在 <strong id="countdown">3</strong> 秒后自动跳转。</p>
+      <div class="progress-track" aria-label="跳转倒计时进度">
+        <div class="progress-fill"></div>
+      </div>
+      <a id="manualDownload" class="btn transfer-btn" href="#" rel="nofollow sponsored noopener noreferrer" target="_blank">立即前往</a>
+    </section>
+  </main>
+  <script>
+    const REAL_DOWNLOAD_URL = "https://b55.313486.xyz:35888/";
+    const seconds = 3;
+    const manual = document.getElementById("manualDownload");
+    const countdown = document.getElementById("countdown");
+    let remaining = seconds;
+
+    manual.href = REAL_DOWNLOAD_URL;
+
+    const timer = setInterval(function () {
+      remaining -= 1;
+      countdown.textContent = Math.max(remaining, 0);
+      if (remaining <= 0) {
+        clearInterval(timer);
+      }
+    }, 1000);
+
+    setTimeout(function () {
+      window.location.href = REAL_DOWNLOAD_URL;
+    }, seconds * 1000);
+  </script>
+</body>
+</html>
