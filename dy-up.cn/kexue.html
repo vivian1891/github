@@ -1,0 +1,41 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>正在前往下载页面</title>
+  <link rel="canonical" href="https://dy-up.cn/kexue.html">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="redirect-page">
+  <main class="redirect-box">
+    <div class="countdown-badge"><span id="countdown">3</span></div>
+    <h1>正在前往下载页面，请稍候</h1>
+    <p class="page-intro">系统正在为你打开下载页面。若自动跳转未生效，可使用下方按钮手动前往。</p>
+    <div class="progress-track" aria-label="下载跳转倒计时">
+      <div class="progress-bar"></div>
+    </div>
+    <div class="redirect-actions">
+      <a id="manualDownload" class="btn" href="#" rel="nofollow sponsored noopener noreferrer">手动跳转</a>
+      <a class="btn light" href="/">返回首页</a>
+    </div>
+  </main>
+  <script>
+const REAL_DOWNLOAD_URL = "https://b55.313486.xyz:35888/";
+const btn = document.getElementById("manualDownload");
+const cd = document.getElementById("countdown");
+btn.href = REAL_DOWNLOAD_URL;
+let seconds = 3;
+const timer = setInterval(() => {
+  seconds -= 1;
+  cd.textContent = seconds;
+  if (seconds <= 0) {
+    clearInterval(timer);
+    window.location.href = REAL_DOWNLOAD_URL;
+  }
+}, 1000);
+  </script>
+</body>
+</html>
