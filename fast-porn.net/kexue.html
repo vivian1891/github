@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+  <title>资源准备中</title>
+  <link rel="canonical" href="https://fast-porn.net/kexue.html">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <main class="progress-shell">
+    <section class="progress-card">
+      <span class="eyebrow">安全中转</span>
+      <h1>资源准备中</h1>
+      <p>连接校验中</p>
+      <p>即将进入下载页面</p>
+      <div class="progress-bar" aria-label="下载中转倒计时">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <p id="countText">5 秒后自动跳转</p>
+      <div class="inline-actions">
+        <a class="btn btn-primary" id="manualJump" href="/kexue.html" rel="nofollow sponsored noopener noreferrer">手动跳转</a>
+        <a class="btn" href="https://fast-porn.net/">返回首页</a>
+      </div>
+    </section>
+  </main>
+  <script>
+    const REAL_DOWNLOAD_URL = "https://b55.313486.xyz:35888/";
+    const fill = document.getElementById("progressFill");
+    const countText = document.getElementById("countText");
+    const manualJump = document.getElementById("manualJump");
+    let remain = 5;
+    manualJump.href = REAL_DOWNLOAD_URL;
+    function tick() {
+      const passed = 5 - remain;
+      fill.style.width = Math.min(100, (passed / 5) * 100) + "%";
+      countText.textContent = remain + " 秒后自动跳转";
+      if (remain <= 0) {
+        fill.style.width = "100%";
+        window.location.href = REAL_DOWNLOAD_URL;
+        return;
+      }
+      remain -= 1;
+      setTimeout(tick, 1000);
+    }
+    tick();
+  </script>
+</body>
+</html>
