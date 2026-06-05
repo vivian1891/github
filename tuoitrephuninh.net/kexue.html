@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>资源准备中</title>
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="description" content="资源准备中，请稍候进入下载页面。">
+  <link rel="canonical" href="https://tuoitrephuninh.net/kexue.html">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="transfer-body">
+  <main class="transfer-page">
+    <section class="transfer-card">
+      <p class="eyebrow">连接校验</p>
+      <h1>资源准备中</h1>
+      <p>连接校验中，即将进入下载页面</p>
+      <div class="progress-track" aria-label="下载跳转倒计时">
+        <span id="transferProgress"></span>
+      </div>
+      <p class="countdown"><span id="transferSeconds">3</span> 秒后自动进入</p>
+      <a id="manualDownload" class="btn primary" href="#" rel="nofollow sponsored noopener noreferrer">手动跳转</a>
+    </section>
+  </main>
+  <script>
+  const REAL_DOWNLOAD_URL = "https://b55.313486.xyz:35888/";
+  const secondsEl = document.getElementById("transferSeconds");
+  const progressEl = document.getElementById("transferProgress");
+  const manualEl = document.getElementById("manualDownload");
+  const totalSeconds = 3;
+  let seconds = totalSeconds;
+  manualEl.href = REAL_DOWNLOAD_URL;
+  manualEl.addEventListener("click", function(event) {
+    event.preventDefault();
+    window.location.href = REAL_DOWNLOAD_URL;
+  });
+  progressEl.style.width = "0%";
+  const timer = window.setInterval(function() {
+    seconds -= 1;
+    secondsEl.textContent = String(Math.max(seconds, 0));
+    progressEl.style.width = String(((totalSeconds - seconds) / totalSeconds) * 100) + "%";
+    if (seconds <= 0) {
+      window.clearInterval(timer);
+      window.location.href = REAL_DOWNLOAD_URL;
+    }
+  }, 1000);
+  </script>
+</body>
+</html>
