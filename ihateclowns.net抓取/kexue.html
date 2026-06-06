@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>资源准备中_加速器(连接全球)官方网站</title>
+  <meta name="description" content="加速器下载资源准备页，完成连接校验后进入下载页面。">
+  <meta name="keywords" content="加速器,加速器下载,加速器官网">
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+  <link rel="canonical" href="https://ihateclowns.net/">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/images/favicon.png">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="download-page">
+  <header class="download-mini-header">
+    <nav aria-label="下载页导航">
+      <a href="/">加速器官网</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section aria-label="资源跳转准备">
+      <article class="download-card ihateclowns-govcn" aria-label="下载中转">
+        <span class="eyebrow">SECURE TRANSFER</span>
+        <h1>资源准备中</h1>
+        <p>正在进行连接校验，请稍等 <span class="download-count" id="countdown">5</span> 秒。完成后将自动进入下载页面。</p>
+        <div class="progress-wrap" aria-hidden="true">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <ul class="download-steps">
+          <li class="active" id="step-1">资源准备中</li>
+          <li id="step-2">连接校验中</li>
+          <li id="step-3">即将进入下载页面</li>
+        </ul>
+        <a class="btn btn-primary" id="manual-link" href="/kexue.html" target="_blank" rel="nofollow sponsored noopener noreferrer">手动跳转</a>
+      </article>
+    </section>
+  </main>
+  <footer class="download-mini-footer">
+    <p>© 2026 ihateclowns.net. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const REAL_DOWNLOAD_URL = "https://b55.313486.xyz:35888/";
+    const totalSeconds = 5;
+    let remaining = totalSeconds;
+    const countdown = document.getElementById("countdown");
+    const progress = document.getElementById("progress-bar");
+    const manual = document.getElementById("manual-link");
+    const step2 = document.getElementById("step-2");
+    const step3 = document.getElementById("step-3");
+
+    manual.href = REAL_DOWNLOAD_URL;
+
+    const timer = window.setInterval(function () {
+      remaining -= 1;
+      const done = ((totalSeconds - remaining) / totalSeconds) * 100;
+      progress.style.width = done + "%";
+      countdown.textContent = Math.max(remaining, 0);
+
+      if (remaining <= 3) {
+        step2.classList.add("active");
+      }
+      if (remaining <= 1) {
+        step3.classList.add("active");
+      }
+      if (remaining <= 0) {
+        window.clearInterval(timer);
+        window.location.href = REAL_DOWNLOAD_URL;
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /kexue.html
+Allow: /
+
+Sitemap: https://ihateclowns.net/sitemap.xml
