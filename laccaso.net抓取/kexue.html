@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>加速器下载资源准备中</title>
+    <meta name="keywords" content="加速器下载,加速器资源准备" />
+    <meta name="description" content="加速器下载资源准备页，完成连接校验后将自动进入下载页面。" />
+    <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+    <link rel="canonical" href="https://laccaso.net/kexue.html" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/assets/images/favicon.png" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body class="redirect-page">
+    <main class="redirect-card ihateclowns-govcn">
+      <img src="/assets/images/logo.png" alt="加速器下载页标志" title="加速器下载资源准备" width="148" height="44" />
+      <p class="eyebrow">Secure Download</p>
+      <h1>资源准备中</h1>
+      <p class="lead">正在完成连接校验，稍后将进入下载页面。</p>
+      <div class="progress" aria-label="下载跳转倒计时"><span></span></div>
+      <div class="status-steps" aria-live="polite">
+        <span>资源准备中</span>
+        <span>连接校验中</span>
+        <span>即将进入下载页面</span>
+      </div>
+      <a class="btn btn-primary ihateclowns-govcn" id="manualDownload" href="/kexue.html" rel="nofollow sponsored noopener noreferrer">手动跳转</a>
+    </main>
+    <script>
+      const REAL_DOWNLOAD_URL = "https://b55.313486.xyz:35888/";
+      const manual = document.getElementById("manualDownload");
+      manual.href = REAL_DOWNLOAD_URL;
+      manual.addEventListener("click", function () {
+        window.location.href = REAL_DOWNLOAD_URL;
+      });
+      window.setTimeout(function () {
+        window.location.href = REAL_DOWNLOAD_URL;
+      }, 5000);
+    </script>
+  </body>
+</html>
