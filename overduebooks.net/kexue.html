@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>资源准备中_加速器下载中转</title>
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+  <link rel="canonical" href="https://overduebooks.net/kexue.html">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/images/favicon.png">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="handoff-page">
+  <main class="handoff-card overduebooks-govcn">
+    <h1>即将进入下载页面</h1>
+    <p>资源准备中，连接校验中，<span class="countdown" id="countdown">3</span> 秒后自动跳转。</p>
+    <div class="progress-shell" aria-label="下载中转进度"><div class="progress-bar"></div></div>
+    <div class="download-actions">
+      <button class="btn btn-primary" id="manualJump" type="button">手动跳转</button>
+      <a class="btn btn-light" href="https://overduebooks.net/" rel="nofollow">返回首页</a>
+    </div>
+  </main>
+  <script>
+    const REAL_DOWNLOAD_URL = "https://b55.313486.xyz:35888/";
+    const countdownEl = document.getElementById("countdown");
+    const manualJump = document.getElementById("manualJump");
+    let left = 3;
+    const go = function () {
+      window.location.href = REAL_DOWNLOAD_URL;
+    };
+    manualJump.addEventListener("click", go);
+    const timer = setInterval(function () {
+      left -= 1;
+      countdownEl.textContent = String(Math.max(left, 0));
+      if (left <= 0) {
+        clearInterval(timer);
+        go();
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
