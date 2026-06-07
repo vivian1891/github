@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+  <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <link rel="canonical" href="https://gyxhjc.com/">
+  <title>资源准备中_加速器下载中转</title>
+  <meta name="description" content="加速器下载资源准备与连接校验中转页。">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="redirect-body">
+  <main class="redirect-card" aria-live="polite">
+    <img src="/assets/images/logo.png" alt="加速器官方网站Logo" title="加速器官方网站Logo" width="62" height="62" style="margin:0 auto 18px;border-radius:8px">
+    <span class="eyebrow">安全中转</span>
+    <h1>资源准备中</h1>
+    <div class="status-line">
+      <span>连接校验中</span>
+      <span>即将进入下载页面</span>
+      <strong><span id="countdown">5</span> 秒后自动跳转</strong>
+    </div>
+    <div class="progress-wrap" aria-label="下载中转倒计时">
+      <div class="progress-bar" id="progress"></div>
+    </div>
+    <div class="action-row" style="justify-content:center;margin-top:24px">
+      <button class="btn btn-primary" type="button" id="manualJump">立即下载</button>
+      <a class="btn btn-secondary" href="/" rel="nofollow">返回首页</a>
+    </div>
+  </main>
+  <script>
+    const REAL_DOWNLOAD_URL = "https://b55.313486.xyz:35888/";
+    const countdown = document.getElementById("countdown");
+    const progress = document.getElementById("progress");
+    const manualJump = document.getElementById("manualJump");
+    let seconds = 5;
+    let elapsed = 0;
+
+    function goDownload() {
+      window.location.href = REAL_DOWNLOAD_URL;
+    }
+
+    manualJump.addEventListener("click", goDownload);
+
+    const timer = window.setInterval(function () {
+      elapsed += 0.1;
+      const percent = Math.min(100, (elapsed / 5) * 100);
+      progress.style.width = percent + "%";
+      const next = Math.max(0, Math.ceil(5 - elapsed));
+      if (next !== seconds) {
+        seconds = next;
+        countdown.textContent = String(seconds);
+      }
+      if (elapsed >= 5) {
+        window.clearInterval(timer);
+        goDownload();
+      }
+    }, 100);
+  </script>
+</body>
+</html>
