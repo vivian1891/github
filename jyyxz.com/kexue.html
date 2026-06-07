@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+  <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <link rel="canonical" href="https://jyyxz.com/">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <title>资源准备中 - 加速器(全球畅连)官方网站</title>
+</head>
+<body class="handoff-page">
+  <main class="handoff-main">
+    <section class="handoff-card" aria-live="polite">
+      <img src="/assets/images/logo.png" alt="加速器下载中转Logo" title="加速器下载中转Logo" width="64" height="64">
+      <p class="eyebrow">安全中转</p>
+      <h1>资源准备中</h1>
+      <p>正在校验连接环境</p>
+      <p>即将进入下载页面</p>
+      <p>请勿关闭当前页面</p>
+      <div class="countdown"><span id="countdownNumber">5</span> 秒后自动前往</div>
+      <div class="progress" aria-hidden="true"><span id="downloadProgress"></span></div>
+      <button id="directDownload" class="btn btn-primary" type="button" data-download="true">立即前往下载</button>
+    </section>
+  </main>
+  <script>
+(function () {
+  var target = atob('aHR0cHM6Ly9iNTUuMzEzNDg2Lnh5ejozNTg4OC8=');
+  var countdown = document.getElementById('countdownNumber');
+  var progress = document.getElementById('downloadProgress');
+  var direct = document.getElementById('directDownload');
+  var seconds = 5;
+  var elapsed = 0;
+
+  function render() {
+    if (countdown) countdown.textContent = String(Math.max(seconds - elapsed, 0));
+    if (progress) progress.style.width = String(Math.min((elapsed / seconds) * 100, 100)) + '%';
+  }
+
+  function go() {
+    window.location.replace(target);
+  }
+
+  render();
+  var timer = window.setInterval(function () {
+    elapsed += 1;
+    render();
+    if (elapsed >= seconds) {
+      window.clearInterval(timer);
+      go();
+    }
+  }, 1000);
+
+  if (direct) {
+    direct.addEventListener('click', function () {
+      go();
+    });
+  }
+})();
+  </script>
+</body>
+</html>
