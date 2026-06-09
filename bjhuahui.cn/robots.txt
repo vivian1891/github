@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /kexue.html
+Allow: /
+Sitemap: https://bjhuahui.cn/sitemap.xml
