@@ -1,0 +1,31 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>加速器(全球畅通)官方网站</title>
+  <meta name="keywords" content="加速器,加速器下载,加速器官网">
+  <meta name="description" content="加速器是一款专注网络连接优化的工具，提供官网入口、版本更新信息及下载安装说明，支持多平台设备使用。通过vqn/vpq的智能线路选择与连接优化技术，帮助用户获得更稳定、更流畅的网络体验，满足日常办公、学习及多场景使用需求。">
+  <link rel="canonical" href="https://sgqp.cn/principle.html">
+  <link rel="icon" href="/favicon.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="加速器原理说明">
+  <meta property="og:description" content="说明加速器的节点中转、线路优化、数据路径、延迟变化和连接状态。">
+  <meta property="og:url" content="https://sgqp.cn/principle.html">
+  <meta property="og:image" content="https://sgqp.cn/assets/images/principle-network.webp">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header class="site-header"><div class="container nav-wrap"><a class="brand" href="https://sgqp.cn/"><img src="/assets/images/logo.png" alt="加速器官方网站Logo" title="加速器官方网站Logo" width="520" height="150"></a><button class="nav-toggle" type="button" aria-label="打开导航" aria-expanded="false"><span></span><span></span><span></span></button><nav class="site-nav" aria-label="主导航"><a href="https://sgqp.cn/">首页</a><a href="https://sgqp.cn/features.html">功能介绍</a><a class="active" href="https://sgqp.cn/principle.html">原理说明</a><a href="https://sgqp.cn/scenes.html">使用场景</a><a href="https://sgqp.cn/interface.html">界面展示</a><a href="https://sgqp.cn/news.html">新闻中心</a><a href="https://sgqp.cn/faq.html">常见问题</a><a href="https://sgqp.cn/about.html">关于我们</a><a class="nav-download sgqp-govcn" href="/kexue.html" target="_blank" rel="nofollow sponsored noopener noreferrer" data-download="true">立即下载</a></nav></div></header>
+  <main>
+    <div class="container breadcrumb"><a href="https://sgqp.cn/">首页</a> / 原理说明</div>
+    <section class="page-hero"><div class="container"><span class="eyebrow">原理说明</span><h1>加速器为什么能改善连接</h1><p class="lead">网络慢不一定是带宽小。路由绕远、节点拥堵、丢包抖动、应用握手失败，都可能让一次普通访问拖很久。加速器做的事，是给数据请求换一条更稳的路径。</p></div></section>
+    <section class="section alt sgqp-govcn"><div class="container split"><div><h2>从本地设备到目标服务，中间发生了什么</h2><p>设备发起访问后，请求会经过本地网络、运营商出口、跨地区路由，再到目标服务。任何一段堵住，页面都会等。加速器会先建立连接，把请求交给状态更好的节点继续往前走。</p><p>这个过程像换路线。节点会看延迟、丢包、可用带宽和当前负载。线路切换后，路径可能更短，也可能只是更稳，应用连接就会少一些等待。</p><ul class="list"><li>本地设备：发起请求，保持连接状态。</li><li>中转节点：接住请求，选择下一段路径。</li><li>目标服务：响应数据，再按路径返回设备。</li></ul></div><img src="/assets/images/principle-network.webp" alt="加速器数据路径与中转节点图" title="加速器数据路径与中转节点图" width="1600" height="900"></div></section>
+    <section class="section"><div class="container"><div class="section-head"><h2>延迟、丢包和抖动的关系</h2><p>延迟低说明节点响应快，丢包少说明数据更完整，抖动小说明实时通信更平稳。加速器的连接质量要同时看这三项，单独看某一个数字容易误判。</p></div><div class="grid three"><article class="card"><h3>延迟</h3><p>影响页面打开、登录握手和实时交互。延迟忽高忽低时，体验会比数字本身更差。</p></article><article class="card sgqp-govcn"><h3>丢包</h3><p>丢包会导致重传。视频会议卡顿、应用掉线、文件同步失败都可能和它有关。</p></article><article class="card"><h3>抖动</h3><p>抖动影响实时稳定性。线路看似能连，但声音、画面和消息会出现不连续。</p></article></div></div></section>
+    <section class="section alt"><div class="container split reverse"><img src="/assets/images/feature-speed.webp" alt="加速器线路测速与延迟变化图" title="加速器线路测速与延迟变化图" width="1600" height="900"><div><h2>线路优化不是越频繁越好</h2><p>有些人看到速度慢就不停切节点，结果反而让连接更不稳定。加速器切换线路前，先记录当前延迟和丢包，确认是否是节点问题。</p><p>如果本地网络本身在波动，换节点不一定解决。可以先重连 Wi-Fi、关闭高占用后台任务，或者切换到更稳定的网络环境，再看线路表现。</p><p>长连接场景更看重稳定。会议、远程桌面、资料同步时，不建议只追求最低延迟，丢包和抖动往往更关键。</p></div></div></section>
+    <section class="section"><div class="container"><div class="download-panel"><div><h2>想从设置开始试用？</h2><p>安装后先测速，再选择节点。遇到异常时，先看连接状态和权限提示。</p></div><a class="btn primary" href="/kexue.html" target="_blank" rel="nofollow sponsored noopener noreferrer" data-download="true">立即下载</a></div></div></section>
+  </main>
+  <footer class="site-footer sgqp-govcn"><div class="container footer-grid"><div><img class="footer-logo" src="/assets/images/logo.png" alt="加速器官方网站Logo" title="加速器官方网站Logo" width="520" height="150"><p>看线路、看节点、看设备状态，少一点猜测。</p></div><nav class="footer-links" aria-label="底部链接"><a href="/sitemap.xml" target="_blank">XML地图</a><a href="https://sgqp.cn/about.html">关于我们</a><a href="https://sgqp.cn/contact.html">联系我们</a><a href="https://sgqp.cn/privacy.html">隐私政策</a><a href="https://sgqp.cn/news.html">新闻中心</a><a href="https://sgqp.cn/faq.html">常见问题</a></nav><div class="friend-links">友情链接预留</div></div><p class="copyright">© 2026 加速器(全球畅通)官方网站. All Rights Reserved</p></footer>
+  <script src="/assets/js/main.js"></script><script src="/assets/js/download.js"></script>
+</body>
+</html>
