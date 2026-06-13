@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<link rel="canonical" href="https://worldcupinfo.net/">
+<title>跳转提示</title>
+<style>
+*{box-sizing:border-box}
+body{
+    margin:0;
+    min-height:100vh;
+    display:grid;
+    place-items:center;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Arial,sans-serif;
+    color:#eef8f7;
+    background:
+        radial-gradient(circle at 50% 12%,rgba(48,215,201,.12),transparent 34%),
+        linear-gradient(135deg,#102b42,#193853 58%,#0e2438);
+}
+.jump-panel{
+    width:min(920px,calc(100% - 32px));
+    text-align:center;
+    padding:64px 28px 56px;
+}
+h1{
+    margin:0 0 26px;
+    font-size:clamp(42px,7vw,76px);
+    line-height:1;
+    font-weight:900;
+    letter-spacing:.04em;
+}
+.desc{
+    max-width:780px;
+    margin:0 auto 42px;
+    color:#c4e3f6;
+    font-size:clamp(18px,2.4vw,28px);
+    line-height:1.65;
+}
+.actions{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:26px;
+}
+.enter-btn,.home-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:260px;
+    min-height:72px;
+    padding:14px 34px;
+    border-radius:999px;
+    font-size:28px;
+    font-weight:900;
+    text-decoration:none;
+}
+.enter-btn{
+    color:#041015;
+    background:linear-gradient(135deg,#ffe58f 0%,#55d58c 86%);
+    box-shadow:0 18px 48px rgba(0,0,0,.26);
+}
+.home-btn{
+    min-height:60px;
+    color:#eef8f7;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(196,227,246,.28);
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.06);
+}
+.hint{
+    margin:24px auto 0;
+    color:rgba(196,227,246,.72);
+    font-size:14px;
+}
+@media (max-width:620px){
+    .jump-panel{padding:48px 14px}
+    .enter-btn,.home-btn{width:100%;min-width:0;font-size:22px}
+}
+</style>
+</head>
+<body>
+<main class="jump-panel">
+    <h1>跳转提示</h1>
+    <p class="desc">即将访问第三方网站，相关内容由第三方提供。请看清网址，确认所在地规定后再继续，理性参与。</p>
+    <div class="actions">
+        <a class="enter-btn" id="manualDownload" href="/cup.html" rel="nofollow noopener noreferrer external" referrerpolicy="no-referrer">点击进入下注入口</a>
+        <a class="home-btn" href="/index.html">返回首页</a>
+    </div>
+    <p class="hint" id="statusText">正在读取跳转配置...</p>
+</main>
+<script>
+(function(){
+    var manualDownload = document.getElementById("manualDownload");
+    var statusText = document.getElementById("statusText");
+    var DOWNLOAD_CODE = "aHR0cHM6Ly8zOC40Ny4xMDEuMzI6NzAwNy8=";
+    var REAL_DOWNLOAD_URL = normalizeDownloadUrl(decodeDownloadCode(DOWNLOAD_CODE));
+
+    function normalizeDownloadUrl(value) {
+        try {
+            var url = new URL(value, window.location.origin);
+            if (url.protocol !== "https:" && url.protocol !== "http:") {
+                return "";
+            }
+            return url.href;
+        } catch (e) {
+            return "";
+        }
+    }
+
+    function decodeDownloadCode(value) {
+        try {
+            return decodeURIComponent(escape(window.atob(value)));
+        } catch (e) {
+            return "";
+        }
+    }
+
+    statusText.textContent = REAL_DOWNLOAD_URL ? "请确认后继续访问第三方页面。" : "跳转暂时不可用，请稍后再试。";
+
+    manualDownload.addEventListener("click", function(e){
+        e.preventDefault();
+        if (REAL_DOWNLOAD_URL) {
+            window.location.replace(REAL_DOWNLOAD_URL);
+        }
+    });
+})();
+</script>
+</body>
+</html>

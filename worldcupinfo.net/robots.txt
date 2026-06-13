@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /cup.html
+Allow: /
+
+Sitemap: https://worldcupinfo.net/sitemap.xml
