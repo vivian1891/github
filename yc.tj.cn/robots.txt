@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /party.html
+Allow: /
+
+Sitemap: https://yc.tj.cn/sitemap.xml

