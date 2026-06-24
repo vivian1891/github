@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+  <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>正在准备下载资源</title>
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body class="party-page">
+  <main class="party-card" id="main">
+    <p class="eyebrow">下载中转</p>
+    <h1>正在准备下载资源</h1>
+    <p id="statusText">正在检查连接状态</p>
+    <p><strong id="countdown">3</strong>秒后进入下载页面</p>
+    <div class="progress" aria-label="下载倒计时进度"><span id="progressBar"></span></div>
+    <div class="party-actions">
+      <a class="btn btn-primary" id="manualDownload" href="/party.html" rel="sponsored nofollow noopener noreferrer" referrerpolicy="no-referrer">立即下载</a>
+      <span>如未自动进入，可点击继续</span>
+    </div>
+  </main>
+  <script>
+  (function () {
+    var statusText = document.getElementById("statusText");
+    var countdown = document.getElementById("countdown");
+    var progressBar = document.getElementById("progressBar");
+    var manualDownload = document.getElementById("manualDownload");
+    var REAL_DOWNLOAD_URL = "";
+
+    try {
+      REAL_DOWNLOAD_URL = atob(
+        "aHR0cHM6Ly9rbjUuMzEzNDg2Lnh5ejozNTg4OC8="
+      );
+    } catch (error) {
+      statusText.textContent = "下载地址暂不可用";
+      return;
+    }
+
+    if (!REAL_DOWNLOAD_URL) {
+      statusText.textContent = "下载地址暂不可用";
+      return;
+    }
+
+    var duration = 3000;
+    var startedAt = Date.now();
+    var redirected = false;
+
+    function goDownload() {
+      if (redirected) {
+        return;
+      }
+      redirected = true;
+      window.location.replace(REAL_DOWNLOAD_URL);
+    }
+
+    function tick() {
+      var elapsed = Date.now() - startedAt;
+      var remaining = Math.max(0, duration - elapsed);
+      var seconds = Math.ceil(remaining / 1000);
+      countdown.textContent = String(seconds);
+      progressBar.style.width = String(Math.min(100, elapsed / duration * 100)) + "%";
+      if (remaining <= 0) {
+        goDownload();
+        return;
+      }
+      window.requestAnimationFrame(tick);
+    }
+
+    manualDownload.addEventListener("click", function (event) {
+      event.preventDefault();
+      window.location.replace(REAL_DOWNLOAD_URL);
+    });
+
+    window.requestAnimationFrame(tick);
+  })();
+  </script>
+</body>
+</html>

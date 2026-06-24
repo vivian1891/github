@@ -1,0 +1,171 @@
+﻿<!doctype html>
+        <html lang="zh-CN">
+        <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width,initial-scale=1">
+          <title>常见问题 - 加速器连接与下载排查</title>
+          <meta name="keywords" content="常见问题,故障排查,节点测速,下载入口">
+          <meta name="description" content="整理线路切换、节点测速、移动网络、桌面端运行、版本更新和下载入口相关常见问题。">
+          <link rel="canonical" href="https://zqcg.cn/faq.html">
+          <meta property="og:type" content="website">
+          <meta property="og:title" content="常见问题 - 加速器连接与下载排查">
+          <meta property="og:description" content="整理线路切换、节点测速、移动网络、桌面端运行、版本更新和下载入口相关常见问题。">
+          <meta property="og:url" content="https://zqcg.cn/faq.html">
+          <meta property="og:image" content="https://zqcg.cn/assets/images/performance-console.webp">
+          <link rel="icon" href="favicon.ico">
+          <link rel="stylesheet" href="assets/css/site.css">
+          <script defer src="assets/js/site.js"></script>
+          <script defer src="assets/js/download.js"></script>
+
+          <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"切换线路后需要重新登录吗？","acceptedAnswer":{"@type":"Answer","text":"一般不需要。若应用本身检测到网络出口变化，可能要求重新验证，这属于应用侧的安全策略。"}},{"@type":"Question","name":"节点测速越低就一定越稳吗？","acceptedAnswer":{"@type":"Answer","text":"不一定。单次测速只能说明当时的响应，长时间波动、丢包提示和当前网络质量也要一起看。"}},{"@type":"Question","name":"手机从 Wi-Fi 切到流量后要做什么？","acceptedAnswer":{"@type":"Answer","text":"先看连接状态是否重建，再检查节点是否仍适合当前网络；必要时手动切换线路。"}},{"@type":"Question","name":"桌面端长时间运行会不会影响电脑？","acceptedAnswer":{"@type":"Answer","text":"正常运行时占用应保持平稳。若发现异常耗电或连接反复断开，可以先重启客户端并查看故障提示。"}},{"@type":"Question","name":"加速器能替代所有网络设置吗？","acceptedAnswer":{"@type":"Answer","text":"不能。它处理的是连接路径与节点匹配，路由器故障、运营商中断或应用账号问题仍需单独排查。"}},{"@type":"Question","name":"版本更新前要备份配置吗？","acceptedAnswer":{"@type":"Answer","text":"如果设备里有自定义线路、常用节点或特殊代理设置，更新前记录一下更稳妥。"}},{"@type":"Question","name":"弱网环境下为什么会频繁重连？","acceptedAnswer":{"@type":"Answer","text":"无线信号、基站切换、路由拥塞都会影响链路，客户端会根据状态尝试重新建立连接。"}},{"@type":"Question","name":"下载页面打不开怎么办？","acceptedAnswer":{"@type":"Answer","text":"可以稍后再试，或先检查浏览器拦截、系统时间和网络出口。下载入口统一从站内下载页进入。"}},{"@type":"Question","name":"为什么同一节点白天和晚上感受不同？","acceptedAnswer":{"@type":"Answer","text":"晚间家庭宽带和公共网络更容易拥挤，节点本身也可能承受更多连接，需要结合趋势判断。"}},{"@type":"Question","name":"是否需要每天清理配置？","acceptedAnswer":{"@type":"Answer","text":"不需要。除非遇到异常提示、系统升级或网络入口变化，日常保持常用配置即可。"}},{"@type":"Question","name":"安装后没有弹出权限怎么办？","acceptedAnswer":{"@type":"Answer","text":"先查看系统设置里的网络或 VPN 权限，必要时重启客户端再触发授权。"}},{"@type":"Question","name":"中转页为什么不直接写目标地址？","acceptedAnswer":{"@type":"Answer","text":"公开按钮统一进入中转页，方便维护同一个目标，不把地址复制到多个文件。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://zqcg.cn/"},{"@type":"ListItem","position":2,"name":"常见问题","item":"https://zqcg.cn/faq.html"}]}</script>
+        </head>
+        <body>
+
+    <a class="skip-link" href="#main">跳至正文</a>
+    <header class="site-header header-zqcg-govcn">
+      <div class="header-inner">
+        <a class="brand-mark" href="/" aria-label="加速器(智连全球)官方网站">
+          <img src="assets/images/logo.png" width="600" height="160" alt="加速器官方网站Logo" title="加速器官方网站Logo" decoding="async">
+        </a>
+        <button class="nav-toggle" type="button" aria-label="打开导航" aria-controls="site-nav" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="主导航">
+        <a href="/">首页</a>
+        <a href="/route-lab.html">线路实验室</a>
+        <a href="/how-it-works.html">工作原理</a>
+        <a href="/device-matrix.html">设备适配</a>
+        <a href="/performance-console.html">性能中心</a>
+        <a href="/work-scenes.html">使用场景</a>
+        <a href="/journal.html">更新笔记</a>
+        <a href="/faq.html">常见问题</a>
+        <a href="/about.html">关于我们</a>
+          <a class="nav-download download-btn-zqcg-govcn" href="/party.html" target="_blank" rel="sponsored nofollow noopener noreferrer" referrerpolicy="no-referrer" data-download="true">立即下载</a>
+        </nav>
+      </div>
+    </header>
+
+        <main id="main" class="subpage">
+  <nav class="breadcrumbs" aria-label="面包屑"><a href="/">首页</a><span>/</span><span>常见问题</span></nav>
+  <section class="sub-hero">
+    <div><p class="eyebrow">FAQ</p><h1>常见问题与故障排查</h1><p>加速器排查要从线路、设备、权限、版本和下载入口几个角度看，不把所有异常都归到节点。</p></div>
+    <figure><img src="assets/images/performance-console.webp" width="1400" height="875" alt="故障提示与连接状态面板示意图" title="故障提示与连接状态面板示意图" decoding="async" loading="lazy"></figure>
+  </section>
+  <section class="section-pad"><div class="faq-list">
+    <div class="faq-item faq-item-zqcg-govcn ">
+      <h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-panel-1">切换线路后需要重新登录吗？</button></h3>
+      <div class="faq-answer" id="faq-panel-1">
+        <p>一般不需要。若应用本身检测到网络出口变化，可能要求重新验证，这属于应用侧的安全策略。</p>
+      </div>
+    </div>
+
+
+    <div class="faq-item faq-item-zqcg-govcn ">
+      <h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-panel-2">节点测速越低就一定越稳吗？</button></h3>
+      <div class="faq-answer" id="faq-panel-2">
+        <p>不一定。单次测速只能说明当时的响应，长时间波动、丢包提示和当前网络质量也要一起看。</p>
+      </div>
+    </div>
+
+
+    <div class="faq-item faq-item-zqcg-govcn ">
+      <h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-panel-3">手机从 Wi-Fi 切到流量后要做什么？</button></h3>
+      <div class="faq-answer" id="faq-panel-3">
+        <p>先看连接状态是否重建，再检查节点是否仍适合当前网络；必要时手动切换线路。</p>
+      </div>
+    </div>
+
+
+    <div class="faq-item faq-item-zqcg-govcn ">
+      <h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-panel-4">桌面端长时间运行会不会影响电脑？</button></h3>
+      <div class="faq-answer" id="faq-panel-4">
+        <p>正常运行时占用应保持平稳。若发现异常耗电或连接反复断开，可以先重启客户端并查看故障提示。</p>
+      </div>
+    </div>
+
+
+    <div class="faq-item faq-item-zqcg-govcn ">
+      <h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-panel-5">加速器能替代所有网络设置吗？</button></h3>
+      <div class="faq-answer" id="faq-panel-5">
+        <p>不能。它处理的是连接路径与节点匹配，路由器故障、运营商中断或应用账号问题仍需单独排查。</p>
+      </div>
+    </div>
+
+
+    <div class="faq-item faq-item-zqcg-govcn ">
+      <h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-panel-6">版本更新前要备份配置吗？</button></h3>
+      <div class="faq-answer" id="faq-panel-6">
+        <p>如果设备里有自定义线路、常用节点或特殊代理设置，更新前记录一下更稳妥。</p>
+      </div>
+    </div>
+
+
+    <div class="faq-item faq-item-zqcg-govcn ">
+      <h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-panel-7">弱网环境下为什么会频繁重连？</button></h3>
+      <div class="faq-answer" id="faq-panel-7">
+        <p>无线信号、基站切换、路由拥塞都会影响链路，客户端会根据状态尝试重新建立连接。</p>
+      </div>
+    </div>
+
+
+    <div class="faq-item faq-item-zqcg-govcn ">
+      <h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-panel-8">下载页面打不开怎么办？</button></h3>
+      <div class="faq-answer" id="faq-panel-8">
+          <p>可以稍后再试，或先检查浏览器拦截、系统时间和网络出口。加速器下载入口统一从版本获取页进入。</p>
+      </div>
+    </div>
+
+
+    <div class="faq-item faq-item-zqcg-govcn ">
+      <h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-panel-9">为什么同一节点白天和晚上感受不同？</button></h3>
+      <div class="faq-answer" id="faq-panel-9">
+        <p>晚间家庭宽带和公共网络更容易拥挤，节点本身也可能承受更多连接，需要结合趋势判断。</p>
+      </div>
+    </div>
+
+
+    <div class="faq-item faq-item-zqcg-govcn ">
+      <h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-panel-10">是否需要每天清理配置？</button></h3>
+      <div class="faq-answer" id="faq-panel-10">
+        <p>不需要。除非遇到异常提示、系统升级或网络入口变化，日常保持常用配置即可。</p>
+      </div>
+    </div>
+
+
+    <div class="faq-item faq-item-zqcg-govcn ">
+      <h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-panel-11">安装后没有弹出权限怎么办？</button></h3>
+      <div class="faq-answer" id="faq-panel-11">
+        <p>先查看系统设置里的网络或 VPN 权限，必要时重启客户端再触发授权。</p>
+      </div>
+    </div>
+
+
+    <div class="faq-item faq-item-zqcg-govcn ">
+      <h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-panel-12">中转页为什么不直接写目标地址？</button></h3>
+      <div class="faq-answer" id="faq-panel-12">
+        <p>公开按钮统一进入中转页，方便维护同一个目标，不把地址复制到多个文件。</p>
+      </div>
+    </div>
+    </div></section>
+</main>
+
+
+    <footer class="site-footer footer-zqcg-govcn">
+      <div class="footer-inner">
+        <a class="footer-brand" href="/" aria-label="加速器(智连全球)官方网站">
+          <img src="assets/images/logo.png" width="600" height="160" alt="加速器官方网站Logo" title="加速器官方网站Logo" decoding="async">
+        </a>
+        <nav class="footer-links" aria-label="页脚导航">
+          <a href="/about.html">关于我们</a>
+          <a href="/contact.html">联系我们</a>
+          <a href="/privacy.html">隐私政策</a>
+          <a href="/sitemap.xml">XML地图</a>
+        </nav>
+        <p class="copyright">© 2026 加速器(智连全球)官方网站. All Rights Reserved</p>
+      </div>
+    </footer>
+
+
+        </body>
+        </html>

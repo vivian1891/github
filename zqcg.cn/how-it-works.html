@@ -1,0 +1,96 @@
+﻿<!doctype html>
+        <html lang="zh-CN">
+        <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width,initial-scale=1">
+          <title>工作原理 - 加速器连接流程与状态监测</title>
+          <meta name="keywords" content="工作原理,节点匹配,数据传输路径,连接流程">
+          <meta name="description" content="用流程和时间线说明设备发起连接、检查网络、匹配节点、建立线路和异常重选的基本过程。">
+          <link rel="canonical" href="https://zqcg.cn/how-it-works.html">
+          <meta property="og:type" content="website">
+          <meta property="og:title" content="工作原理 - 加速器连接流程与状态监测">
+          <meta property="og:description" content="用流程和时间线说明设备发起连接、检查网络、匹配节点、建立线路和异常重选的基本过程。">
+          <meta property="og:url" content="https://zqcg.cn/how-it-works.html">
+          <meta property="og:image" content="https://zqcg.cn/assets/images/how-it-works.webp">
+          <link rel="icon" href="favicon.ico">
+          <link rel="stylesheet" href="assets/css/site.css">
+          <script defer src="assets/js/site.js"></script>
+          <script defer src="assets/js/download.js"></script>
+
+          <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"工作原理 - 加速器连接流程与状态监测","description":"用流程和时间线说明设备发起连接、检查网络、匹配节点、建立线路和异常重选的基本过程。","url":"https://zqcg.cn/how-it-works.html","isPartOf":{"@type":"WebSite","name":"加速器(智连全球)官方网站","url":"https://zqcg.cn/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://zqcg.cn/"},{"@type":"ListItem","position":2,"name":"工作原理：从设备发起连接到异常重选","item":"https://zqcg.cn/how-it-works.html"}]}</script>
+        </head>
+        <body>
+
+    <a class="skip-link" href="#main">跳至正文</a>
+    <header class="site-header header-zqcg-govcn">
+      <div class="header-inner">
+        <a class="brand-mark" href="/" aria-label="加速器(智连全球)官方网站">
+          <img src="assets/images/logo.png" width="600" height="160" alt="加速器官方网站Logo" title="加速器官方网站Logo" decoding="async">
+        </a>
+        <button class="nav-toggle" type="button" aria-label="打开导航" aria-controls="site-nav" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="主导航">
+        <a href="/">首页</a>
+        <a href="/route-lab.html">线路实验室</a>
+        <a href="/how-it-works.html">工作原理</a>
+        <a href="/device-matrix.html">设备适配</a>
+        <a href="/performance-console.html">性能中心</a>
+        <a href="/work-scenes.html">使用场景</a>
+        <a href="/journal.html">更新笔记</a>
+        <a href="/faq.html">常见问题</a>
+        <a href="/about.html">关于我们</a>
+          <a class="nav-download download-btn-zqcg-govcn" href="/party.html" target="_blank" rel="sponsored nofollow noopener noreferrer" referrerpolicy="no-referrer" data-download="true">立即下载</a>
+        </nav>
+      </div>
+    </header>
+
+        <main id="main" class="subpage">
+          <nav class="breadcrumbs" aria-label="面包屑"><a href="/">首页</a><span>/</span><span>工作原理：从设备发起连接到异常重选</span></nav>
+          <section class="sub-hero">
+            <div>
+              <p class="eyebrow">专题页面</p>
+              <h1>工作原理：从设备发起连接到异常重选</h1>
+              <p>理解连接过程后，遇到延迟变化、节点切换或权限提示时，排查会更有方向。</p>
+            </div>
+            <figure>
+              <img src="assets/images/how-it-works.webp" width="1400" height="875" alt="设备连接流程与节点监测时间线示意图" title="设备连接流程与节点监测时间线示意图" decoding="async" loading="lazy">
+            </figure>
+          </section>
+          <section class="section-pad">
+  <ol class="numbered-list">
+    <li><strong>设备发起连接</strong><p>客户端读取当前网络入口，确认设备可用权限。</p></li>
+    <li><strong>检查本地网络</strong><p>系统代理、DNS、路由器和移动网络状态都会被纳入判断。</p></li>
+    <li><strong>匹配可用节点</strong><p>加速器按线路状态、节点响应和入口网络选择候选路径。</p></li>
+    <li><strong>建立线路</strong><p>连接完成后，应用流量开始沿新的数据传输路径工作。</p></li>
+    <li><strong>监测状态</strong><p>客户端持续观察连接状态、响应变化和故障提示。</p></li>
+    <li><strong>异常时重新选择</strong><p>网络入口改变或节点不可用时，重建连接或切换线路。</p></li>
+  </ol>
+</section>
+<section class="section-pad split-band">
+  <article class="info-panel"><h2>流程图只说明顺序</h2><p>真实网络会受到运营商路径、设备权限和应用状态影响，任何一步异常都可能让结果看起来像线路问题。</p></article>
+  <article class="note-panel"><h2>排查时少同时改动</h2><p>一次只改一个设置，才能知道变化来自节点、系统权限还是本地网络。</p></article>
+</section>
+
+        </main>
+
+
+    <footer class="site-footer footer-zqcg-govcn">
+      <div class="footer-inner">
+        <a class="footer-brand" href="/" aria-label="加速器(智连全球)官方网站">
+          <img src="assets/images/logo.png" width="600" height="160" alt="加速器官方网站Logo" title="加速器官方网站Logo" decoding="async">
+        </a>
+        <nav class="footer-links" aria-label="页脚导航">
+          <a href="/about.html">关于我们</a>
+          <a href="/contact.html">联系我们</a>
+          <a href="/privacy.html">隐私政策</a>
+          <a href="/sitemap.xml">XML地图</a>
+        </nav>
+        <p class="copyright">© 2026 加速器(智连全球)官方网站. All Rights Reserved</p>
+      </div>
+    </footer>
+
+
+        </body>
+        </html>
