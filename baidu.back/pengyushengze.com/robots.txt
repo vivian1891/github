@@ -1,0 +1,7 @@
+User-agent: *
+
+Disallow: /kexue.html
+
+Allow: /
+
+Sitemap: https://pengyushengze.com/sitemap.xml
