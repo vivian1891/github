@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>连接状态与性能监测 - 加速器</title>
+  <meta name="keywords" content="加速器,性能监测,连接状态,节点响应,延迟变化,故障排查">
+  <meta name="description" content="查看加速器连接状态、节点响应、延迟变化、线路记录和问题提示，快速判断当前线路是否稳定。">
+  <link rel="canonical" href="https://jsqf.net/monitor.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="连接状态与性能监测 - 加速器">
+  <meta property="og:description" content="加速器性能监测关注连接状态、节点响应、延迟变化和问题排查。">
+  <meta property="og:url" content="https://jsqf.net/monitor.html">
+  <meta property="og:image" content="https://jsqf.net/assets/images/monitor-dashboard.webp">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header class="site-header header-jsqf-govcn"><div class="nav-wrap"><a class="brand" href="/"><img src="/assets/images/logo.png" alt="加速器官方网站Logo" title="加速器官方网站Logo"></a><button class="nav-toggle" type="button" aria-label="展开导航" aria-expanded="false">☰</button><nav class="main-nav" aria-label="主导航"><a href="/">首页</a><a href="/global-link.html">全球互联</a><a href="/principle.html">原理解析</a><a href="/device.html">设备适配</a><a class="active" href="/monitor.html">性能监测</a><a href="/game-scene.html">游戏场景</a><a href="/news.html">新闻中心</a><a href="/faq.html">常见问题</a><a href="/about.html">关于我们</a><a class="btn btn-download download-btn-jsqf-govcn" href="/party.html" target="_blank" rel="nofollow sponsored noopener noreferrer" data-download="true">立即下载</a></nav></div></header>
+  <main>
+    <div class="container breadcrumb"><a href="/">首页</a> / 性能监测</div>
+    <section class="page-hero"><div class="container"><p class="eyebrow">性能监测</p><h1>连接状态、节点响应和延迟变化怎么看</h1><p class="lead">加速器连接后，真正需要观察的是线路是否稳定。状态面板能把延迟曲线、节点响应、线路记录和问题提示摆出来，减少靠感觉判断的次数。</p></div></section>
+    <section class="section">
+      <div class="container split">
+        <figure class="media-panel"><img src="/assets/images/monitor-dashboard.webp" alt="加速器性能监测仪表盘" title="加速器性能监测仪表盘"></figure>
+        <div>
+          <h2>监测面板应该看哪些信号</h2>
+          <p class="lead">延迟低但抖动大，游戏仍会卡。节点响应短时升高，Steam连接可能变慢。加速器把这些信号放在一起看，才能判断线路是否适合继续使用。</p>
+          <p class="lead">加速器监测面板的意义，是把“感觉不稳”变成能读懂的状态。哪条线路波动、哪个节点响应慢、最近一次异常出现在什么场景，都能给后续判断留线索。</p>
+          <p class="lead">遇到问题时，不必先重装。看一次连接状态、换一个节点、再查本地网络，排查路径会清楚很多。</p>
+        </div>
+      </div>
+    </section>
+    <section class="section jsqf-govcn">
+      <div class="container grid-4">
+        <article class="card monitor-card-jsqf-govcn"><h2>连接状态</h2><p>确认已连接不等于稳定，还要看状态是否持续正常。</p></article>
+        <article class="card"><h2>节点响应</h2><p>响应持续升高时，当前节点可能已经拥塞。</p></article>
+        <article class="card"><h2>延迟变化</h2><p>曲线比单次数字更有参考价值，尤其是游戏加速场景。</p></article>
+        <article class="card"><h2>问题提示</h2><p>DNS异常、本地断网、线路不可用都应直接提示。</p></article>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="section-head"><h2>故障排查顺序</h2><p>按顺序检查，能避开很多重复操作。</p></div>
+        <ol class="timeline">
+          <li><strong>看本地网络</strong><br>确认 Wi-Fi、移动网络或办公网络没有明显断续。</li>
+          <li><strong>看节点响应</strong><br>如果节点响应一直高，换线路比重启应用更直接。</li>
+          <li><strong>看线路记录</strong><br>最近稳定的节点可以作为对照，快速判断新线路是否异常。</li>
+          <li><strong>看目标场景</strong><br>Steam连接、游戏平台、远程办公的表现不一样，要分别判断。</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer footer-jsqf-govcn"><div class="footer-wrap"><div class="footer-top"><a class="footer-logo" href="/"><img src="/assets/images/logo.png" alt="加速器官方网站Logo" title="加速器官方网站Logo"></a><div class="footer-links"><a href="/sitemap.xml" target="_blank">XML地图</a><a href="/about.html">关于我们</a><a href="/contact.html">联系我们</a><a href="/privacy.html">隐私政策</a></div></div><div class="copyright">© 2026 加速器(全球互联)官方网站. All Rights Reserved</div></div></footer>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/download.js"></script>
+</body>
+</html>

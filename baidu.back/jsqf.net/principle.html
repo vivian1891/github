@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>加速器原理解析：节点匹配与vqm技术</title>
+  <meta name="keywords" content="加速器原理解析,vqm技术,节点匹配,线路优化,连接路径">
+  <meta name="description" content="从线路选择、节点匹配、vqm技术和连接路径看加速器工作方式，用更直接的方式理解延迟与稳定性的变化。">
+  <link rel="canonical" href="https://jsqf.net/principle.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="加速器原理解析：节点匹配与vqm技术">
+  <meta property="og:description" content="加速器原理解析，重点看节点匹配、vqm技术和连接路径。">
+  <meta property="og:url" content="https://jsqf.net/principle.html">
+  <meta property="og:image" content="https://jsqf.net/assets/images/principle-map.webp">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header class="site-header header-jsqf-govcn">
+    <div class="nav-wrap">
+      <a class="brand" href="/"><img src="/assets/images/logo.png" alt="加速器官方网站Logo" title="加速器官方网站Logo"></a>
+      <button class="nav-toggle" type="button" aria-label="展开导航" aria-expanded="false">☰</button>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="/">首页</a><a href="/global-link.html">全球互联</a><a class="active" href="/principle.html">原理解析</a><a href="/device.html">设备适配</a><a href="/monitor.html">性能监测</a><a href="/game-scene.html">游戏场景</a><a href="/news.html">新闻中心</a><a href="/faq.html">常见问题</a><a href="/about.html">关于我们</a><a class="btn btn-download download-btn-jsqf-govcn" href="/party.html" target="_blank" rel="nofollow sponsored noopener noreferrer" data-download="true">立即下载</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container breadcrumb"><a href="/">首页</a> / 原理解析</div>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">原理解析</p>
+        <h1>加速器如何完成线路选择与节点匹配</h1>
+        <p class="lead">加速器不是把所有连接都塞进同一条通道。它更像一套实时判断流程：先检测网络，再选择节点，随后观察连接反馈。vqm技术参与的是质量判断，让线路优化更接近当前网络情况。</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container split">
+        <figure class="media-panel">
+          <img src="/assets/images/principle-map.webp" alt="加速器原理解析连接路径示意图" title="加速器原理解析连接路径示意图">
+        </figure>
+        <div>
+          <h2>连接路径不是直线</h2>
+          <p class="lead">从设备到目标服务，中间会经过运营商出口、节点入口、线路调度和回程路径。任何一段拥塞，都可能让延迟变高。加速器通过节点匹配寻找更稳的通路，再用连接反馈确认结果。</p>
+          <p class="lead">这也是为什么同一个节点昨天好用，今天不一定仍然最好。线路状态会变化，重新检测可以避免长期停留在不合适的路径上。</p>
+        </div>
+      </div>
+    </section>
+    <section class="section jsqf-govcn">
+      <div class="container">
+        <div class="section-head">
+          <h2>从发起连接到异常切换</h2>
+        </div>
+        <ol class="timeline">
+          <li><strong>发起连接</strong><br>客户端读取当前网络类型，确认目标场景是游戏加速、Steam连接还是日常访问。</li>
+          <li><strong>检查网络</strong><br>观察本地出口、DNS、延迟尖峰和丢包迹象。</li>
+          <li><strong>匹配节点</strong><br>按节点响应、可用性和历史稳定性选择候选线路。</li>
+          <li><strong>建立线路</strong><br>进入优质线路后继续监测延迟和响应变化。</li>
+          <li><strong>状态反馈</strong><br>把连接状态、节点响应和线路记录显示出来，方便排查。</li>
+          <li><strong>异常切换</strong><br>如果抖动持续，切换节点或重新匹配线路。</li>
+        </ol>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container grid-3">
+        <article class="feature-card"><h2>vqm技术看质量</h2><p>它关注连接的连续表现，而不是只抓一个瞬时速度。延迟、抖动、响应时间都会进入判断。</p></article>
+        <article class="feature-card"><h2>节点匹配看场景</h2><p>游戏、办公、社交浏览的线路优先级不同。加速器按场景匹配，能减少无效切换。</p></article>
+        <article class="feature-card"><h2>反馈看结果</h2><p>连接建立后，稳定性还要通过监测面板确认。状态正常再进入游戏，会少一些突发卡顿。</p></article>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer footer-jsqf-govcn"><div class="footer-wrap"><div class="footer-top"><a class="footer-logo" href="/"><img src="/assets/images/logo.png" alt="加速器官方网站Logo" title="加速器官方网站Logo"></a><div class="footer-links"><a href="/sitemap.xml" target="_blank">XML地图</a><a href="/about.html">关于我们</a><a href="/contact.html">联系我们</a><a href="/privacy.html">隐私政策</a></div></div><div class="copyright">© 2026 加速器(全球互联)官方网站. All Rights Reserved</div></div></footer>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/download.js"></script>
+</body>
+</html>
