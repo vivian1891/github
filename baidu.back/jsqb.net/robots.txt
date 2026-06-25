@@ -1,0 +1,7 @@
+User-agent: *
+
+Disallow: /party.html
+
+Allow: /
+
+Sitemap: https://jsqb.net/sitemap.xml

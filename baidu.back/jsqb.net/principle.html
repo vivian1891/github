@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>原理解析 - 加速器(智连全球)官方网站</title>
+<meta name="keywords" content="加速器,游戏加速器,加速器官网,网络加速器,加速器下载">
+<meta name="description" content="原理解析页说明加速器线路选择、节点匹配、连接路径和状态反馈的工作方式，文字简洁，不写成技术论文。">
+<link rel="canonical" href="https://jsqb.net/principle.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="原理解析 - 加速器(智连全球)官方网站">
+<meta property="og:description" content="原理解析页说明加速器线路选择、节点匹配、连接路径和状态反馈的工作方式，文字简洁，不写成技术论文。">
+<meta property="og:url" content="https://jsqb.net/principle.html">
+<meta property="og:site_name" content="加速器(智连全球)官方网站">
+<meta property="og:image" content="https://jsqb.net/assets/images/hero-accelerator.webp">
+<link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/images/favicon.png">
+<link rel="stylesheet" href="/assets/css/style.css">
+
+</head><body>
+<header class="site-header header-jsqb-govcn">
+  <div class="nav-wrap">
+    <a class="brand" href="/" aria-label="加速器(智连全球)官方网站">
+      <img src="/assets/images/logo.png" alt="加速器官方网站Logo" title="加速器官方网站Logo" width="180" height="45">
+    </a>
+    <button class="menu-toggle jsqb-govcn" type="button" aria-label="打开导航" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" aria-label="主导航">
+      <a href="/">首页</a>
+<a href="/connection.html">连接观察</a>
+<a href="/principle.html" aria-current="page">原理解析</a>
+<a href="/device.html">设备适配</a>
+<a href="/monitor.html">性能监测</a>
+<a href="/scenes.html">使用场景</a>
+<a href="/news.html">新闻中心</a>
+<a href="/faq.html">常见问题</a>
+<a href="/about.html">关于我们</a>
+      <a class="nav-download download-btn-jsqb-govcn" href="/party.html" target="_blank" rel="nofollow sponsored noopener noreferrer" data-download="true">立即下载</a>
+    </nav>
+  </div>
+</header><main>
+<section class="page-hero hero-jsqb-govcn">
+  <div class="container page-hero-grid">
+    <div>
+      <p class="eyebrow">原理解析</p>
+      <h1>加速器线路选择与节点匹配原理</h1>
+      <p class="page-lead">原理解析页说明加速器线路选择、节点匹配、连接路径和状态反馈的工作方式，文字简洁，不写成技术论文。</p>
+    </div>
+    <img class="page-hero-img" src="/assets/images/principle-map.webp" alt="加速器线路选择节点匹配原理图" title="加速器线路选择节点匹配原理图" loading="eager">
+  </div>
+</section>
+<section class="section">
+  <div class="container content-grid">
+    <article class="rich-copy">
+      <h2>线路优化为什么会影响延迟</h2>
+      <p>网络访问从设备出发，经过多个节点再到目标服务。路径绕得远、某段拥堵、跨网质量差，都可能让延迟升高。加速器的线路优化，就是在可选路径里挑一个更合适的通道。</p>
+      <p>节点匹配不是只看距离。响应速度、当前负载、网络类型和历史稳定性都会影响结果。离得近但拥挤的节点，不一定比稍远但空闲的节点好。</p>
+      <h2>连接路径要看整体</h2>
+      <p>本地网络不稳时，任何节点都会受影响。节点良好但目标服务异常，也会出现加载慢。把本地、节点、目标三段分开看，才能判断加速器该不该切线。</p>
+      <p>异常切换的意义在于恢复。断开后立刻换到另一条线路，访问体验比等待拥堵自然消退更可靠，但频繁来回切换也会造成短暂停顿。</p>
+    </article>
+    <aside class="side-panel">
+      <h2>路径顺序</h2>
+      <ol class="small-steps">
+        <li>发起连接</li>
+        <li>检查网络</li>
+        <li>匹配节点</li>
+        <li>建立线路</li>
+        <li>反馈状态</li>
+        <li>异常切换</li>
+      </ol>
+      <a class="btn ghost" href="/connection.html">查看连接观察</a>
+    </aside>
+  </div>
+</section>
+<section class="section cards-band">
+  <div class="container cards-3">
+    <article class="card"><h3>少绕路</h3><p>路径更短，响应往往更快。实际表现仍取决于节点状态。</p></article>
+    <article class="card jsqb-govcn"><h3>避拥堵</h3><p>高峰期节点负载会变化，切换线路能绕开明显拥堵。</p></article>
+    <article class="card"><h3>快恢复</h3><p>连接异常时，恢复速度比峰值速度更重要。</p></article>
+  </div>
+</section>
+</main><footer class="site-footer footer-jsqb-govcn">
+  <div class="footer-inner">
+    <a class="footer-brand" href="/">
+      <img src="/assets/images/logo.png" alt="加速器官方网站Logo" title="加速器官方网站Logo" width="180" height="45">
+    </a>
+    <nav class="footer-links" aria-label="底部导航">
+      <a href="/sitemap.xml" target="_blank">XML地图</a>
+      <a href="/about.html">关于我们</a>
+      <a href="/contact.html">联系我们</a>
+      <a href="/privacy.html">隐私政策</a>
+    </nav>
+  </div>
+  <p class="copyright">© 2026 加速器(智连全球)官方网站. All Rights Reserved</p>
+</footer>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/download.js"></script>
+</body>
+</html>
