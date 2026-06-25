@@ -1,0 +1,7 @@
+User-agent: *
+
+Disallow: /party.html
+
+Allow: /
+
+Sitemap: https://cqlxlkjgs.com/sitemap.xml
