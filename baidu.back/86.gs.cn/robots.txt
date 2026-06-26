@@ -1,0 +1,7 @@
+User-agent: *
+
+Disallow: /kexue.html
+
+Allow: /
+
+Sitemap: https://86.gs.cn/sitemap.xml
