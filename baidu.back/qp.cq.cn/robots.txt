@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /party.html
+Allow: /
+
+Sitemap: https://qp.cq.cn/sitemap.xml
