@@ -1,0 +1,112 @@
+:root{
+  --bg:#071024;
+  --panel:#0c1936;
+  --panel-2:#101f46;
+  --text:#edf6ff;
+  --muted:#aabbd4;
+  --line:rgba(148,194,255,.22);
+  --cyan:#62f5df;
+  --blue:#4bb7ff;
+  --violet:#9a72ff;
+  --gold:#ffd35d;
+  --pink:#ff72c7;
+  --shadow:0 18px 50px rgba(0,0,0,.28);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif;background:linear-gradient(180deg,#061022 0%,#0a1432 42%,#091126 100%);color:var(--text);line-height:1.75}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(120deg,rgba(98,245,223,.08),transparent 28%,rgba(154,114,255,.08) 74%,transparent),repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 1px,transparent 1px 92px);opacity:.55;z-index:-1}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.site-header{position:sticky;top:0;z-index:50;background:rgba(6,14,32,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.header-inner{max-width:1200px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:18px}
+.brand img,.footer-brand img{width:180px;height:auto}
+.site-nav{display:flex;align-items:center;gap:15px;flex:1;font-size:14px;color:#d7e6fa}
+.site-nav a{padding:8px 0;border-bottom:1px solid transparent}
+.site-nav a:hover{color:var(--cyan);border-color:var(--cyan)}
+.nav-toggle{display:none;width:42px;height:42px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.04)}
+.nav-toggle span{display:block;width:20px;height:2px;margin:5px auto;background:#dcecff}
+.nav-download{white-space:nowrap}
+.download-btn-zcloudsoft-govcn,[data-download="true"].download-btn-zcloudsoft-govcn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 24px;border-radius:999px;color:#061327;background:linear-gradient(135deg,var(--cyan),var(--blue) 48%,var(--violet));font-weight:800;letter-spacing:0;box-shadow:0 0 22px rgba(75,183,255,.42),inset 0 1px 0 rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.35);transition:transform .2s ease,box-shadow .2s ease,filter .2s ease}
+.download-btn-zcloudsoft-govcn:hover{transform:translateY(-2px);filter:saturate(1.08);box-shadow:0 0 34px rgba(98,245,223,.55),0 14px 34px rgba(75,183,255,.22)}
+.download-btn-zcloudsoft-govcn.big{min-height:56px;padding:0 34px;font-size:18px}
+.btn.ghost{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;border-radius:999px;border:1px solid rgba(130,210,255,.42);color:#eaf6ff;background:rgba(255,255,255,.04)}
+.hero,.page-hero,.section{max-width:1200px;margin:0 auto;padding:72px 20px}
+.hero-grid,.page-hero,.split-section,.dashboard-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:34px;align-items:center}
+.hero h1,.page-hero h1{font-size:clamp(34px,5vw,64px);line-height:1.12;margin:12px 0 18px;letter-spacing:0}
+.hero-lead,.page-hero p,.section-head p{font-size:18px;color:#c6d7ef;margin:0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--cyan);font-size:14px;font-weight:800;letter-spacing:0}
+.eyebrow::before{content:"";width:22px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--gold))}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin:28px 0}
+.signal-row{display:flex;gap:10px;flex-wrap:wrap}
+.signal-row span{border:1px solid var(--line);background:rgba(255,255,255,.05);border-radius:999px;padding:7px 12px;color:#cfe4ff;font-size:13px}
+.hero-media,.media-frame,.article-cover{border:1px solid var(--line);border-radius:8px;background:linear-gradient(135deg,rgba(98,245,223,.08),rgba(154,114,255,.08));box-shadow:var(--shadow);overflow:hidden}
+.media-frame,.article-cover{aspect-ratio:16/9;display:grid;place-items:center;padding:10px}
+.hero-media{padding:10px}
+.hero-media img,.media-frame img,.article-cover img,.cockpit-card img,.news-card img{width:100%;height:100%;object-fit:contain;background:#081530;border-radius:6px}
+.section-head{max-width:760px;margin-bottom:26px}
+.section-head h2,.text-panel h2,.content-card h2,.download-strip h2,.download-panel h2,.route-table h2,.related-news h2{font-size:clamp(24px,3vw,36px);line-height:1.25;margin:8px 0 12px;letter-spacing:0}
+.note-grid,.prose-grid,.cockpit-grid,.news-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.note-grid{grid-template-columns:1fr 1fr}
+.note-card,.content-card,.cockpit-card,.news-card,.metric-card,.info-stack article,.download-strip,.download-panel,.route-table,.about-mini{border:1px solid var(--line);border-radius:8px;background:rgba(10,24,55,.72);box-shadow:0 12px 35px rgba(0,0,0,.18)}
+.note-card,.content-card,.cockpit-card,.news-card,.metric-card,.info-stack article,.route-table,.about-mini{padding:22px}
+.note-card h3,.cockpit-card h3,.news-card h2,.news-card h3{margin:12px 0 8px;line-height:1.35;font-size:20px;letter-spacing:0}
+.note-card p,.content-card p,.text-panel p,.cockpit-card p,.news-card p,.about-mini p,.article-content p{color:#c4d4eb;margin:0 0 14px}
+.reverse{grid-template-columns:.98fr 1.02fr}
+.reverse .text-panel{order:2}
+.text-link,.cockpit-card a,.news-card a,.article-nav a,.related-news a{color:var(--cyan);font-weight:700}
+.cockpit-card img,.news-card img{aspect-ratio:16/9;border:1px solid var(--line);padding:6px;background:#081530}
+.dashboard-grid{grid-template-columns:1.1fr .9fr}
+.metric-list,.info-stack{display:grid;gap:14px}
+.metric-card strong,.info-stack strong{display:block;color:#fff;font-size:18px;margin-bottom:4px}
+.metric-card span,.info-stack span{color:#b9cbe5}
+.download-strip,.download-panel{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:28px;background:linear-gradient(135deg,rgba(98,245,223,.14),rgba(75,183,255,.08),rgba(154,114,255,.15))}
+.download-strip p,.download-panel p{margin:0;color:#c6d7ef}
+.faq-list{display:grid;gap:12px}
+.faq-list details{border:1px solid var(--line);border-radius:8px;background:rgba(10,24,55,.72);padding:18px}
+.faq-list summary{cursor:pointer;font-weight:800;color:#f1f7ff}
+.faq-list p{margin:10px 0 0;color:#c6d7ef}
+.page-hero{padding-top:62px}
+.page-hero-copy{max-width:650px}
+.route-table .table-like{display:grid;grid-template-columns:150px 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.table-like span,.table-like b{padding:14px 16px;background:#0d1d42}
+.table-like span{color:var(--gold);font-weight:800}
+.table-like b{color:#dcecff;font-weight:600}
+.article-page{max-width:900px;margin:0 auto;padding:60px 20px 80px}
+.article-head{text-align:center;margin-bottom:28px}
+.article-head h1{font-size:clamp(30px,4vw,48px);line-height:1.2;margin:10px 0;letter-spacing:0}
+.article-head p{color:#c6d7ef;font-size:18px}
+.crumb{color:var(--cyan);font-weight:800}
+.article-content{font-size:18px;margin-top:28px}
+.article-nav,.related-news{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
+.article-nav span{color:#71829e}
+.site-footer{border-top:1px solid var(--line);background:#061024;margin-top:40px}
+.footer-inner{max-width:1200px;margin:0 auto;padding:34px 20px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.footer-brand p{color:#9fb2cd;margin:8px 0 0;max-width:460px}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap;color:#d6e8ff}
+.footer-links a:hover{color:var(--cyan)}
+.copyright{text-align:center;margin:0;padding:0 20px 26px;color:#b6c8df}
+@media (max-width:980px){
+  .header-inner{flex-wrap:wrap}
+  .nav-toggle{display:block;margin-left:auto}
+  .site-nav{display:none;flex-basis:100%;order:4;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .site-nav.open{display:grid}
+  .nav-download{margin-left:auto}
+  .hero-grid,.page-hero,.split-section,.reverse,.dashboard-grid{grid-template-columns:1fr}
+  .reverse .text-panel{order:0}
+  .note-grid,.prose-grid,.cockpit-grid,.news-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .header-inner{padding:10px 14px}
+  .brand img,.footer-brand img{width:150px}
+  .nav-download{width:100%;order:5}
+  .download-btn-zcloudsoft-govcn{width:100%}
+  .hero,.page-hero,.section{padding:48px 16px}
+  .hero h1,.page-hero h1{font-size:34px}
+  .hero-lead,.page-hero p,.article-content{font-size:16px}
+  .note-grid,.prose-grid,.cockpit-grid,.news-grid{grid-template-columns:1fr}
+  .download-strip,.download-panel,.footer-inner{flex-direction:column;align-items:flex-start}
+  .route-table .table-like{grid-template-columns:1fr}
+  .media-frame,.article-cover{padding:7px}
+  .footer-links{gap:12px}
+}
